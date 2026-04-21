@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agent Integrations — AI Agents for Home Service Businesses</title>
+  <meta name="description" content="We plug AI agents into home service businesses. They answer your phones, book your jobs, and work your database 24/7. Book a 15-minute call." />
+
+  <meta property="og:title" content="Agent Integrations — AI Agents for Home Service Businesses" />
+  <meta property="og:description" content="We plug AI agents into home service businesses. They answer your phones, book your jobs, and work your database 24/7." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://agentintegrations.ai/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --bg-soft: #11141b;
+      --fg: #f5f6f8;
+      --muted: #8b93a7;
+      --accent: #64ffda;   /* electric teal — "signal" */
+      --accent-2: #ffb347; /* warm orange — "human" */
+      --line: #1f2430;
+      --radius: 14px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height: 1.55; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    nav.top { padding: 22px 0; border-bottom: 1px solid var(--line); }
+    nav.top .container { display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.01em; }
+    .logo-mark { width: 30px; height: 30px; display: inline-grid; place-items: center; background: linear-gradient(135deg, var(--accent), #4cc3b5); color: #0b0d12; border-radius: 8px; font-weight: 800; }
+    .cta { padding: 10px 16px; border-radius: 999px; background: var(--accent); color: #0b0d12; font-weight: 600; }
+    .cta:hover { text-decoration: none; background: #7affdf; }
+    .cta.secondary { background: transparent; color: var(--fg); border: 1px solid var(--line); }
+
+    /* Hero */
+    header.hero { padding: 96px 0 72px; }
+    header.hero h1 { font-family: "Instrument Serif", Georgia, serif; font-size: clamp(40px, 6vw, 76px); line-height: 1.02; margin: 0 0 24px; letter-spacing: -0.02em; }
+    header.hero h1 em { font-style: italic; color: var(--accent); }
+    header.hero p.lede { font-size: 20px; color: var(--muted); max-width: 680px; margin: 0 0 32px; }
+    header.hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    /* Proof strip */
+    .proof { padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-soft); }
+    .proof .container { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 24px; color: var(--muted); font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+    /* Sections */
+    section { padding: 80px 0; border-bottom: 1px solid var(--line); }
+    section h2 { font-family: "Instrument Serif", Georgia, serif; font-size: clamp(30px, 4vw, 48px); margin: 0 0 16px; letter-spacing: -0.02em; }
+    section p.sub { color: var(--muted); max-width: 640px; margin: 0 0 40px; font-size: 17px; }
+
+    /* Grid */
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+    .card h3 { margin: 0 0 8px; font-size: 20px; }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .card .tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent); background: rgba(100,255,218,0.08); padding: 4px 10px; border-radius: 999px; margin-bottom: 14px; letter-spacing: 0.02em; }
+
+    /* How it works */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; counter-reset: step; }
+    .step { padding: 28px; border-left: 2px solid var(--accent); background: var(--bg-soft); border-radius: 0 var(--radius) var(--radius) 0; position: relative; }
+    .step::before { counter-increment: step; content: counter(step, decimal-leading-zero); font-family: "Instrument Serif", Georgia, serif; font-size: 34px; color: var(--accent); display: block; margin-bottom: 8px; line-height: 1; }
+    .step h4 { margin: 0 0 8px; font-size: 18px; }
+    .step p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    /* Pricing */
+    .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .tier { border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; background: var(--bg-soft); display: flex; flex-direction: column; }
+    .tier.featured { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(100,255,218,0.15), 0 20px 60px -30px rgba(100,255,218,0.3); }
+    .tier h3 { margin: 0 0 8px; font-size: 22px; }
+    .tier .price { font-family: "Instrument Serif", Georgia, serif; font-size: 42px; line-height: 1; margin: 12px 0 4px; }
+    .tier .price small { font-size: 14px; color: var(--muted); font-family: "Inter", sans-serif; }
+    .tier .setup { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+    .tier ul { list-style: none; padding: 0; margin: 0 0 24px; color: var(--fg); font-size: 15px; }
+    .tier ul li { padding: 8px 0; border-bottom: 1px dashed var(--line); }
+    .tier ul li:last-child { border-bottom: 0; }
+    .tier ul li::before { content: "→ "; color: var(--accent); font-weight: 700; }
+    .tier .cta { margin-top: auto; text-align: center; }
+
+    /* FAQ */
+    details { border-top: 1px solid var(--line); padding: 20px 0; }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { cursor: pointer; font-weight: 600; font-size: 17px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    summary::after { content: "+"; color: var(--accent); font-size: 24px; line-height: 1; }
+    details[open] summary::after { content: "–"; }
+    details p { margin: 12px 0 0; color: var(--muted); }
+
+    /* CTA Banner */
+    .cta-banner { padding: 72px 0; text-align: center; background: linear-gradient(135deg, rgba(100,255,218,0.06), rgba(255,179,71,0.04)); }
+    .cta-banner h2 { font-family: "Instrument Serif", Georgia, serif; font-size: clamp(30px, 4vw, 48px); margin: 0 0 16px; }
+    .cta-banner p { color: var(--muted); max-width: 520px; margin: 0 auto 24px; }
+
+    /* Footer */
+    footer { padding: 48px 0 60px; color: var(--muted); font-size: 14px; }
+    footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container">
+    <div class="logo">
+      <span class="logo-mark">AI</span>
+      <span>Agent Integrations</span>
+    </div>
+    <a class="cta" href="#book">Book a call</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <h1>Hire an AI employee who <em>never misses a call.</em></h1>
+    <p class="lede">We plug AI agents into home service businesses. They answer your phones, book your jobs, and work your database 24/7 — so you stop losing revenue to missed calls and slow follow-ups.</p>
+    <div class="actions">
+      <a class="cta" href="#book">See a live demo →</a>
+      <a class="cta secondary" href="#how">How it works</a>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="container">
+    <span>Built for Roofers</span>
+    <span>HVAC &amp; Plumbing</span>
+    <span>Pool &amp; Landscaping</span>
+    <span>Cleaning &amp; Pest</span>
+    <span>Based in Jupiter, FL</span>
+  </div>
+</div>
+
+<section id="problem">
+  <div class="container">
+    <h2>Your business is bleeding revenue while the phone rings.</h2>
+    <p class="sub">If you run a home service business, you already know: every missed call is a job that went to your competitor. Every dead lead in your CRM is money you already paid for, sitting there doing nothing. Your team can't be on at 7pm on a Sunday. An AI agent can.</p>
+    <div class="grid-3">
+      <div class="card"><span class="tag">Missed Calls</span><h3>35% of calls go unanswered.</h3><p>Most home service businesses miss 1 in 3 inbound calls. That's directly lost revenue — the caller is already shopping, and the next ring gets the job.</p></div>
+      <div class="card"><span class="tag">Slow Follow-Up</span><h3>The first to reply wins.</h3><p>Leads contacted in under 5 minutes close 21x more than those contacted after 30 minutes. Your team can't keep up. AI can.</p></div>
+      <div class="card"><span class="tag">Dead Database</span><h3>Thousands of old leads, zero revenue.</h3><p>Every unresponsive lead from the last 2 years is still a prospect. Our AI agents wake them up with personal, conversational outreach.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <h2>How it works.</h2>
+    <p class="sub">We don't sell software. We install a system — an AI front desk that feels like a real employee, customized to your business, your voice, and your workflow.</p>
+    <div class="steps">
+      <div class="step"><h4>Discovery call</h4><p>15 minutes. We learn your business, your current tools, and the top 3 places you're bleeding money.</p></div>
+      <div class="step"><h4>AI agent build</h4><p>We train your AI agent on your services, pricing, FAQs, and voice — and plug it into your phone, SMS, email, and CRM.</p></div>
+      <div class="step"><h4>Go live in 10 days</h4><p>Calls get answered. Appointments get booked. Old leads get worked. You keep selling jobs, not answering phones.</p></div>
+      <div class="step"><h4>Ongoing optimization</h4><p>We tune the agent monthly based on real calls, book more meetings, and surface what's working. Your MRR, our accountability.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <h2>Simple pricing. Real ROI.</h2>
+    <p class="sub">Most clients pay for themselves in the first month through recovered missed calls alone. No contracts — if we're not making you money, fire us.</p>
+    <div class="pricing">
+      <div class="tier">
+        <h3>AI Front Desk</h3>
+        <div class="price">$750<small>/mo</small></div>
+        <div class="setup">$1,500 one-time setup</div>
+        <ul>
+          <li>24/7 AI voice agent for missed calls</li>
+          <li>SMS &amp; email lead nurture</li>
+          <li>Google review request automation</li>
+          <li>CRM + calendar integration</li>
+          <li>Monthly optimization</li>
+        </ul>
+        <a class="cta secondary" href="#book">Start here →</a>
+      </div>
+      <div class="tier featured">
+        <h3>AI Sales Team</h3>
+        <div class="price">$1,500<small>/mo</small></div>
+        <div class="setup">$3,000 one-time setup</div>
+        <ul>
+          <li>Everything in AI Front Desk</li>
+          <li>Outbound AI caller for dead leads</li>
+          <li>Database reactivation campaigns</li>
+          <li>2-way calendar sync &amp; auto-booking</li>
+          <li>Reporting dashboard</li>
+        </ul>
+        <a class="cta" href="#book">Most popular →</a>
+      </div>
+      <div class="tier">
+        <h3>AI Growth Engine</h3>
+        <div class="price">$2,500+<small>/mo</small></div>
+        <div class="setup">$5,000+ one-time setup</div>
+        <ul>
+          <li>Everything in AI Sales Team</li>
+          <li>Automated cold outreach at scale</li>
+          <li>Multi-channel sequencing</li>
+          <li>Meeting-booked guarantee</li>
+          <li>Dedicated strategist</li>
+        </ul>
+        <a class="cta secondary" href="#book">Talk to us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-us">
+  <div class="container">
+    <h2>Why Agent Integrations.</h2>
+    <p class="sub">We're not a national SaaS with a call center. We're operators in South Florida who build AI systems for real businesses — and we run them on ourselves first.</p>
+    <div class="grid-3">
+      <div class="card"><h3>Built by operators</h3><p>We don't pitch theory. We've run service businesses ourselves — vape vending, event ops, agency sales. We know what actually moves a dollar.</p></div>
+      <div class="card"><h3>We dogfood everything</h3><p>Every agent we sell, we run internally first. Our own outreach and follow-up runs on the same stack we'll install for you.</p></div>
+      <div class="card"><h3>Fast, no contracts</h3><p>Live in 10 days. Month-to-month after setup. If we don't earn it, you don't keep us.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <h2>Questions we get a lot.</h2>
+    <p class="sub">If the answer isn't here, just ask on the call.</p>
+
+    <details>
+      <summary>Does the AI sound robotic?</summary>
+      <p>No. Modern AI voice is nearly indistinguishable from a human on a typical inbound call. We tune it to match your business tone and scripts. You'll hear it for yourself in the demo.</p>
+    </details>
+    <details>
+      <summary>What CRMs do you integrate with?</summary>
+      <p>GoHighLevel, HubSpot, Salesforce, Jobber, Housecall Pro, ServiceTitan, and anything with a Zapier/Make-compatible API. If you have something custom, we'll scope it on the discovery call.</p>
+    </details>
+    <details>
+      <summary>How long until it's live?</summary>
+      <p>Ten business days from discovery call to live system, including your approval of the agent's voice and scripts.</p>
+    </details>
+    <details>
+      <summary>Do I have to replace my team?</summary>
+      <p>No — and we don't recommend it. The AI handles the calls and tasks your humans don't have time for. Your best people stay focused on high-value work.</p>
+    </details>
+    <details>
+      <summary>What if the AI messes up?</summary>
+      <p>Every agent has an instant escalation path to a human (you, your manager, or an answering service you choose). Plus we monitor call quality weekly and tune continuously.</p>
+    </details>
+    <details>
+      <summary>Contracts?</summary>
+      <p>Month-to-month after setup. No long-term lock-in. If we're not earning our keep, fire us.</p>
+    </details>
+  </div>
+</section>
+
+<section id="book" class="cta-banner">
+  <div class="container">
+    <h2>See it answer your phone. Live.</h2>
+    <p>Book a 15-minute call and we'll show you an AI agent answering a demo call for a business just like yours. You'll hear it, then you'll decide.</p>
+    <a class="cta" href="mailto:kyle@agentintegrations.ai?subject=Book%20a%20demo%20call">Book a demo →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Agent Integrations · A Donnelly Capital Ventures company · Jupiter, FL</div>
+    <div><a href="mailto:kyle@agentintegrations.ai">kyle@agentintegrations.ai</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
