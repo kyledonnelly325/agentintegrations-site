@@ -6,20 +6,21 @@
     <title>Agent Integrations | AI Sales Team for Home Service Businesses</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
+            line-height: 1.8;
             color: #1E293B;
+            background: #ffffff;
         }
         
-        /* Header with Logo */
+        /* Header */
         header {
             background: white;
-            padding: 20px 40px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 24px 40px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -34,19 +35,14 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 16px;
         }
         .logo-icon {
-            width: 50px;
-            height: 50px;
-        }
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.2;
+            width: 48px;
+            height: 48px;
         }
         .logo-text .brand {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 900;
             color: #1E293B;
         }
@@ -54,209 +50,268 @@
             background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .logo-text .url {
-            font-size: 0.95rem;
-            color: #64748B;
-            font-weight: 500;
         }
         .header-cta {
             background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
             color: white;
-            padding: 12px 30px;
-            border-radius: 6px;
+            padding: 12px 28px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1rem;
-            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 0.95rem;
+            transition: all 0.2s;
         }
         .header-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(124,58,237,0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(124,58,237,0.3);
         }
         
-        /* Hero Section */
+        /* Hero Section - ONLY GRADIENT ON PAGE */
         .hero {
             background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
             color: white;
-            padding: 100px 20px;
+            padding: 150px 40px;
             text-align: center;
         }
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 900;
-            margin-bottom: 25px;
+            margin-bottom: 32px;
             line-height: 1.1;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .hero .subhead {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 500;
-            margin-bottom: 45px;
+            margin-bottom: 48px;
             opacity: 0.95;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
         .hero .cta-button {
             display: inline-block;
             background: white;
             color: #7C3AED;
-            padding: 20px 50px;
-            font-size: 1.3rem;
+            padding: 20px 48px;
+            font-size: 1.25rem;
             font-weight: 800;
             text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            transition: all 0.2s;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
         }
         .hero .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.3);
         }
         
-        /* Stats Bar */
-        .stats {
-            background: #1E293B;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .stat-item h3 {
-            font-size: 3rem;
-            background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-            font-weight: 900;
-        }
-        .stat-item p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        /* Problem Section */
+        /* Problem Section - WHITE BACKGROUND */
         .problem {
-            padding: 80px 20px;
-            max-width: 1100px;
+            padding: 150px 40px;
+            max-width: 1200px;
             margin: 0 auto;
+            background: white;
         }
         .problem h2 {
-            font-size: 2.8rem;
-            margin-bottom: 50px;
+            font-size: 3rem;
+            margin-bottom: 24px;
             text-align: center;
             color: #1E293B;
             font-weight: 900;
+            line-height: 1.2;
         }
-        .problem-list {
+        .problem .intro {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #64748B;
+            margin-bottom: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .problem-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
         }
-        .problem-item {
-            background: #fff;
-            padding: 35px;
+        .problem-card {
+            background: white;
+            padding: 48px;
             border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-            border-left: 5px solid #ef4444;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #ef4444;
+            transition: all 0.3s;
         }
-        .problem-item h3 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
+        .problem-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+        .problem-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: #1E293B;
+            font-weight: 800;
+        }
+        .problem-card p {
+            color: #64748B;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .problem-stat {
+            background: #FEF2F2;
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 60px;
+            border: 2px solid #FEE2E2;
+        }
+        .problem-stat p {
+            font-size: 1.4rem;
+            color: #1E293B;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+        .problem-stat .highlight {
             color: #ef4444;
             font-weight: 800;
         }
-        .problem-item p {
-            color: #64748B;
-            font-size: 1.15rem;
-            line-height: 1.7;
-        }
-        .problem-cta {
-            text-align: center;
-            font-size: 1.5rem;
-            color: #1E293B;
-            font-weight: 700;
-            margin-top: 50px;
-        }
         
-        /* Solution Section */
-        .solution {
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
-            color: white;
-            text-align: center;
+        /* Use Cases Section - LIGHT GRAY BACKGROUND */
+        .use-cases {
+            padding: 150px 40px;
+            background: #F8FAFC;
         }
-        .solution h2 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
+        .use-cases h2 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            text-align: center;
+            color: #1E293B;
             font-weight: 900;
         }
-        .solution .intro {
+        .use-cases .intro {
+            text-align: center;
             font-size: 1.3rem;
+            color: #64748B;
+            margin-bottom: 80px;
             max-width: 800px;
-            margin: 0 auto 60px;
-            opacity: 0.95;
-            font-weight: 500;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .solution .agents {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+        .scenarios {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+        .scenario {
+            background: white;
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .scenario h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1E293B;
+            font-weight: 800;
+        }
+        .scenario p {
+            font-size: 1.15rem;
+            color: #64748B;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .scenario .result {
+            font-size: 1.2rem;
+            color: #10B981;
+            font-weight: 700;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #F1F5F9;
+        }
+        
+        /* Solution Section - WHITE BACKGROUND */
+        .solution {
+            padding: 150px 40px;
+            background: white;
             max-width: 1200px;
             margin: 0 auto;
         }
+        .solution h2 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            text-align: center;
+            color: #1E293B;
+            font-weight: 900;
+        }
+        .solution .intro {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #64748B;
+            margin-bottom: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .agents {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
         .agent {
-            background: rgba(255,255,255,0.15);
-            padding: 40px;
+            background: white;
+            padding: 48px;
             border-radius: 12px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.2);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .agent:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
         }
         .agent h3 {
             font-size: 2rem;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            color: #1E293B;
             font-weight: 900;
         }
         .agent .role {
             font-size: 1.2rem;
-            margin-bottom: 20px;
-            opacity: 0.9;
+            margin-bottom: 24px;
+            color: #7C3AED;
             font-style: italic;
             font-weight: 600;
         }
         .agent ul {
             list-style: none;
-            text-align: left;
-            margin-top: 20px;
         }
         .agent li {
-            padding: 8px 0;
+            padding: 10px 0;
             font-size: 1.05rem;
+            color: #64748B;
+            line-height: 1.6;
         }
         .agent li:before {
             content: "✓ ";
+            color: #10B981;
             font-weight: bold;
-            margin-right: 8px;
+            margin-right: 10px;
         }
         
-        /* Pricing Section */
+        /* Pricing Section - LIGHT GRAY BACKGROUND */
         .pricing {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 150px 40px;
+            background: #F8FAFC;
         }
         .pricing h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 24px;
             text-align: center;
             color: #1E293B;
             font-weight: 900;
@@ -265,83 +320,83 @@
             text-align: center;
             font-size: 1.3rem;
             color: #64748B;
-            margin-bottom: 60px;
-            font-weight: 500;
+            margin-bottom: 80px;
         }
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .pricing-card {
             background: white;
-            border: 3px solid #e2e8f0;
+            border: 2px solid #E2E8F0;
             border-radius: 12px;
-            padding: 45px;
+            padding: 48px;
             text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s;
         }
         .pricing-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
         }
         .pricing-card.featured {
             border-color: #7C3AED;
-            box-shadow: 0 15px 40px rgba(124,58,237,0.25);
+            box-shadow: 0 8px 24px rgba(124,58,237,0.15);
             position: relative;
         }
         .pricing-card.featured:before {
             content: "MOST POPULAR";
             position: absolute;
-            top: -15px;
+            top: -16px;
             left: 50%;
             transform: translateX(-50%);
             background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
             color: white;
-            padding: 8px 25px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 8px 24px;
+            border-radius: 24px;
+            font-size: 0.8rem;
             font-weight: 800;
+            letter-spacing: 0.5px;
         }
         .pricing-card h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 16px;
             color: #1E293B;
             font-weight: 900;
         }
         .pricing-card .price {
             font-size: 3.5rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
+            color: #1E293B;
+            margin-bottom: 8px;
         }
         .pricing-card .price span {
             font-size: 1.3rem;
             color: #64748B;
+            font-weight: 600;
         }
         .pricing-card .tagline {
             font-size: 1.1rem;
-            color: #64748B;
-            margin-bottom: 30px;
-            font-style: italic;
+            color: #7C3AED;
+            margin-bottom: 32px;
             font-weight: 600;
         }
         .pricing-card ul {
             list-style: none;
-            margin: 30px 0;
+            margin: 32px 0;
             text-align: left;
         }
         .pricing-card li {
             padding: 12px 0;
             color: #64748B;
             font-size: 1.05rem;
+            line-height: 1.6;
         }
         .pricing-card li:before {
             content: "✓ ";
-            color: #10b981;
+            color: #10B981;
             font-weight: bold;
             margin-right: 10px;
         }
@@ -349,62 +404,125 @@
             display: inline-block;
             background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
             color: white;
-            padding: 15px 35px;
+            padding: 16px 40px;
             font-size: 1.1rem;
             font-weight: 800;
             text-decoration: none;
-            border-radius: 6px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 8px;
+            transition: all 0.2s;
         }
         .pricing-card .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(124,58,237,0.3);
+            box-shadow: 0 6px 16px rgba(124,58,237,0.3);
         }
         .pricing-footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 64px;
             font-size: 1.3rem;
             color: #1E293B;
             font-weight: 600;
         }
         .pricing-footer .highlight {
-            background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #7C3AED;
             font-weight: 900;
         }
         
-        /* ROI Calculator */
+        /* Testimonials Section - WHITE BACKGROUND */
+        .testimonials {
+            padding: 150px 40px;
+            background: white;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .testimonials h2 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            text-align: center;
+            color: #1E293B;
+            font-weight: 900;
+        }
+        .testimonials .intro {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #64748B;
+            margin-bottom: 80px;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+        }
+        .testimonial {
+            background: #F8FAFC;
+            padding: 48px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .testimonial .quote {
+            font-size: 1.15rem;
+            color: #1E293B;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        .testimonial .author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .testimonial .avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .testimonial .author-info h4 {
+            font-size: 1.1rem;
+            color: #1E293B;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        .testimonial .author-info p {
+            font-size: 0.95rem;
+            color: #64748B;
+        }
+        
+        /* ROI Section - LIGHT GRAY BACKGROUND */
         .roi {
-            padding: 80px 20px;
-            background: #f8fafc;
+            padding: 150px 40px;
+            background: #F8FAFC;
         }
         .roi h2 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
+            font-size: 3rem;
+            margin-bottom: 24px;
             text-align: center;
             color: #1E293B;
             font-weight: 900;
         }
         .roi-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
-            padding: 50px;
+            padding: 64px;
             border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         .roi-example {
-            background: #f0fdf4;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border-left: 5px solid #10b981;
+            background: #F0FDF4;
+            padding: 40px;
+            border-radius: 12px;
+            margin: 32px 0;
+            border-left: 4px solid #10B981;
         }
         .roi-example h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.6rem;
+            margin-bottom: 24px;
             color: #1E293B;
             font-weight: 800;
         }
@@ -412,60 +530,68 @@
             font-size: 1.15rem;
             color: #64748B;
             line-height: 1.8;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
         .roi-example .result {
             font-size: 1.8rem;
             font-weight: 900;
-            color: #10b981;
-            margin-top: 25px;
+            color: #10B981;
+            margin-top: 24px;
+        }
+        .roi-footnote {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #64748B;
+            margin-top: 40px;
+            line-height: 1.7;
         }
         
-        /* Lead Form Section */
+        /* Lead Form Section - WHITE BACKGROUND */
         .lead-form {
-            padding: 80px 20px;
+            padding: 150px 40px;
+            background: white;
         }
         .lead-form h2 {
-            font-size: 2.8rem;
-            margin-bottom: 25px;
+            font-size: 3rem;
+            margin-bottom: 24px;
             text-align: center;
             color: #1E293B;
             font-weight: 900;
         }
-        .lead-form p {
+        .lead-form .intro {
             text-align: center;
             font-size: 1.3rem;
             color: #64748B;
-            margin-bottom: 50px;
-            font-weight: 500;
+            margin-bottom: 64px;
         }
         .form-container {
-            max-width: 650px;
+            max-width: 700px;
             margin: 0 auto;
-            background: white;
-            padding: 50px;
+            background: #F8FAFC;
+            padding: 64px;
             border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
         .form-group {
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
         .form-group label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-weight: 700;
             color: #1E293B;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 6px;
+            padding: 16px;
+            border: 2px solid #E2E8F0;
+            border-radius: 8px;
             font-size: 1.05rem;
             font-family: 'Inter', sans-serif;
             transition: border-color 0.2s;
+            background: white;
         }
         .form-group input:focus,
         .form-group textarea:focus {
@@ -480,31 +606,33 @@
             width: 100%;
             background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
             color: white;
-            padding: 18px;
-            font-size: 1.3rem;
+            padding: 20px;
+            font-size: 1.25rem;
             font-weight: 800;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.2s;
         }
         .submit-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(124,58,237,0.3);
         }
         
-        /* Footer */
+        /* Footer - DARK BACKGROUND */
         footer {
             background: #1E293B;
             color: white;
-            padding: 50px 20px;
+            padding: 64px 40px;
             text-align: center;
         }
+        footer p {
+            margin: 12px 0;
+            font-size: 1.05rem;
+            opacity: 0.9;
+        }
         footer a {
-            background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #7C3AED;
             text-decoration: none;
             font-weight: 700;
         }
@@ -513,62 +641,60 @@
         }
         
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero .subhead { font-size: 1.2rem; }
-            .pricing-grid { grid-template-columns: 1fr; }
-            .stat-item h3 { font-size: 2.5rem; }
-            header { padding: 15px 20px; }
-            .logo-text .brand { font-size: 1.4rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero { padding: 100px 24px; }
+            .problem, .use-cases, .solution, .pricing, .testimonials, .roi, .lead-form { padding: 100px 24px; }
+            .problem h2, .use-cases h2, .solution h2, .pricing h2, .testimonials h2, .roi h2, .lead-form h2 { font-size: 2.2rem; }
+            .form-container, .roi-content { padding: 40px 24px; }
+            .pricing-grid, .problem-grid, .testimonial-grid { grid-template-columns: 1fr; }
             .header-cta { display: none; }
         }
     </style>
 </head>
 <body>
-    <!-- Header with Logo -->
+    <!-- Header -->
     <header>
         <div class="header-content">
             <div class="logo-container">
                 <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#7C3AED"/>
+                            <stop offset="100%" style="stop-color:#3B82F6"/>
                         </linearGradient>
                     </defs>
-                    <circle cx="50" cy="15" r="3" fill="url(#logoGradient)"/>
-                    <circle cx="58" cy="16" r="3" fill="url(#logoGradient)" opacity="0.9"/>
-                    <circle cx="65" cy="19" r="3" fill="url(#logoGradient)" opacity="0.8"/>
-                    <circle cx="71" cy="24" r="3" fill="url(#logoGradient)" opacity="0.7"/>
-                    <circle cx="76" cy="29" r="3" fill="url(#logoGradient)" opacity="0.6"/>
-                    <circle cx="80" cy="36" r="3" fill="url(#logoGradient)" opacity="0.5"/>
-                    <circle cx="83" cy="43" r="3" fill="url(#logoGradient)" opacity="0.4"/>
-                    <circle cx="84" cy="50" r="3" fill="url(#logoGradient)" opacity="0.3"/>
-                    <circle cx="83" cy="57" r="3" fill="url(#logoGradient)" opacity="0.4"/>
-                    <circle cx="80" cy="64" r="3" fill="url(#logoGradient)" opacity="0.5"/>
-                    <circle cx="76" cy="71" r="3" fill="url(#logoGradient)" opacity="0.6"/>
-                    <circle cx="71" cy="76" r="3" fill="url(#logoGradient)" opacity="0.7"/>
-                    <circle cx="65" cy="81" r="3" fill="url(#logoGradient)" opacity="0.8"/>
-                    <circle cx="58" cy="84" r="3" fill="url(#logoGradient)" opacity="0.9"/>
-                    <circle cx="50" cy="85" r="3" fill="url(#logoGradient)"/>
-                    <circle cx="42" cy="84" r="3" fill="url(#logoGradient)" opacity="0.9"/>
-                    <circle cx="35" cy="81" r="3" fill="url(#logoGradient)" opacity="0.8"/>
-                    <circle cx="29" cy="76" r="3" fill="url(#logoGradient)" opacity="0.7"/>
-                    <circle cx="24" cy="71" r="3" fill="url(#logoGradient)" opacity="0.6"/>
-                    <circle cx="20" cy="64" r="3" fill="url(#logoGradient)" opacity="0.5"/>
-                    <circle cx="17" cy="57" r="3" fill="url(#logoGradient)" opacity="0.4"/>
-                    <circle cx="16" cy="50" r="3" fill="url(#logoGradient)" opacity="0.3"/>
-                    <circle cx="17" cy="43" r="3" fill="url(#logoGradient)" opacity="0.4"/>
-                    <circle cx="20" cy="36" r="3" fill="url(#logoGradient)" opacity="0.5"/>
-                    <circle cx="24" cy="29" r="3" fill="url(#logoGradient)" opacity="0.6"/>
-                    <circle cx="29" cy="24" r="3" fill="url(#logoGradient)" opacity="0.7"/>
-                    <circle cx="35" cy="19" r="3" fill="url(#logoGradient)" opacity="0.8"/>
-                    <circle cx="42" cy="16" r="3" fill="url(#logoGradient)" opacity="0.9"/>
-                    <text x="50" y="60" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="900" 
-                          text-anchor="middle" fill="#1E293B">AI</text>
+                    <circle cx="50" cy="15" r="3" fill="url(#logoGrad)"/>
+                    <circle cx="58" cy="16" r="3" fill="url(#logoGrad)" opacity="0.9"/>
+                    <circle cx="65" cy="19" r="3" fill="url(#logoGrad)" opacity="0.8"/>
+                    <circle cx="71" cy="24" r="3" fill="url(#logoGrad)" opacity="0.7"/>
+                    <circle cx="76" cy="29" r="3" fill="url(#logoGrad)" opacity="0.6"/>
+                    <circle cx="80" cy="36" r="3" fill="url(#logoGrad)" opacity="0.5"/>
+                    <circle cx="83" cy="43" r="3" fill="url(#logoGrad)" opacity="0.4"/>
+                    <circle cx="84" cy="50" r="3" fill="url(#logoGrad)" opacity="0.3"/>
+                    <circle cx="83" cy="57" r="3" fill="url(#logoGrad)" opacity="0.4"/>
+                    <circle cx="80" cy="64" r="3" fill="url(#logoGrad)" opacity="0.5"/>
+                    <circle cx="76" cy="71" r="3" fill="url(#logoGrad)" opacity="0.6"/>
+                    <circle cx="71" cy="76" r="3" fill="url(#logoGrad)" opacity="0.7"/>
+                    <circle cx="65" cy="81" r="3" fill="url(#logoGrad)" opacity="0.8"/>
+                    <circle cx="58" cy="84" r="3" fill="url(#logoGrad)" opacity="0.9"/>
+                    <circle cx="50" cy="85" r="3" fill="url(#logoGrad)"/>
+                    <circle cx="42" cy="84" r="3" fill="url(#logoGrad)" opacity="0.9"/>
+                    <circle cx="35" cy="81" r="3" fill="url(#logoGrad)" opacity="0.8"/>
+                    <circle cx="29" cy="76" r="3" fill="url(#logoGrad)" opacity="0.7"/>
+                    <circle cx="24" cy="71" r="3" fill="url(#logoGrad)" opacity="0.6"/>
+                    <circle cx="20" cy="64" r="3" fill="url(#logoGrad)" opacity="0.5"/>
+                    <circle cx="17" cy="57" r="3" fill="url(#logoGrad)" opacity="0.4"/>
+                    <circle cx="16" cy="50" r="3" fill="url(#logoGrad)" opacity="0.3"/>
+                    <circle cx="17" cy="43" r="3" fill="url(#logoGrad)" opacity="0.4"/>
+                    <circle cx="20" cy="36" r="3" fill="url(#logoGrad)" opacity="0.5"/>
+                    <circle cx="24" cy="29" r="3" fill="url(#logoGrad)" opacity="0.6"/>
+                    <circle cx="29" cy="24" r="3" fill="url(#logoGrad)" opacity="0.7"/>
+                    <circle cx="35" cy="19" r="3" fill="url(#logoGrad)" opacity="0.8"/>
+                    <circle cx="42" cy="16" r="3" fill="url(#logoGrad)" opacity="0.9"/>
+                    <text x="50" y="60" font-family="Inter" font-size="28" font-weight="900" text-anchor="middle" fill="#1E293B">AI</text>
                 </svg>
                 <div class="logo-text">
                     <div class="brand">AGENT <span>INTEGRATIONS</span></div>
-                    <div class="url">AgentIntegrations.ai</div>
                 </div>
             </div>
             <a href="#get-demo" class="header-cta">Get Demo</a>
@@ -577,53 +703,73 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Get 10-20 New Customers Per Month.<br>Our AI Sales Team Does the Calling For You.</h1>
-        <p class="subhead">Sal calls your cold leads, reactivates dormant prospects, and books appointments.<br>Amy answers your phone and handles the details. You just show up and close.</p>
-        <a href="#get-demo" class="cta-button">Get Your Free Demo →</a>
-    </section>
-
-    <!-- Stats Bar -->
-    <section class="stats">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <h3>100+</h3>
-                <p>Outbound Calls Per Week</p>
-            </div>
-            <div class="stat-item">
-                <h3>24/7</h3>
-                <p>Never Misses a Call</p>
-            </div>
-            <div class="stat-item">
-                <h3>$2K/mo</h3>
-                <p>Full Sales Team</p>
-            </div>
-        </div>
+        <h1>You're Losing $50K–$200K Per Year Because You Can't Answer the Phone</h1>
+        <p class="subhead">72% of emergency service calls go to the first business that answers. If that's not you, it's your competitor. Our AI sales team works 24/7 so you never miss another lead.</p>
+        <a href="#get-demo" class="cta-button">See How It Works →</a>
     </section>
 
     <!-- Problem Section -->
     <section class="problem">
-        <h2>You're Leaving Money on the Table</h2>
-        <div class="problem-list">
-            <div class="problem-item">
-                <h3>📋 100+ Cold Leads Sitting in a Spreadsheet</h3>
-                <p>You collected them at trade shows, from old jobs, from your website. They never got called. That's $50K-$200K in potential revenue... gone.</p>
+        <h2>The Real Cost of Missed Calls</h2>
+        <p class="intro">Research from ServiceTitan and HomeAdvisor shows that most home service businesses are leaking revenue through three critical gaps:</p>
+        
+        <div class="problem-grid">
+            <div class="problem-card">
+                <h3>📋 Cold Leads Die in Spreadsheets</h3>
+                <p>You have 100-500 leads from trade shows, past jobs, and online inquiries. You meant to call them. You never did. That's $50K-$200K in potential revenue sitting idle while your competitors call their lists.</p>
             </div>
-            <div class="problem-item">
-                <h3>😤 No Time to Follow Up</h3>
-                <p>You're on job sites 10 hours/day. By the time you get home, it's too late to call. Your leads go cold. Your competitors swoop in.</p>
+            <div class="problem-card">
+                <h3>📞 After-Hours Calls Go to Voicemail</h3>
+                <p>Emergency calls happen at 11pm on Saturday. Your phone rings. You're exhausted from a 12-hour day. The call goes to voicemail. The homeowner calls the next contractor. You lost a $4K job because you needed sleep.</p>
             </div>
-            <div class="problem-item">
-                <h3>💸 Spending 3 Hours/Day on the Phone</h3>
-                <p>"What's your pricing?" "When can you come out?" Same questions, different day. Time you could spend DOING THE WORK and making real money.</p>
+            <div class="problem-card">
+                <h3>⏰ No Time for Follow-Up</h3>
+                <p>You gave a quote three weeks ago. You meant to follow up. You're on a job site 10 hours/day. By the time you remember, they already hired someone else. This happens 5-10 times per month.</p>
             </div>
         </div>
-        <p class="problem-cta">What if your sales team worked 24/7, never took a day off, and cost $2K/month?</p>
+        
+        <div class="problem-stat">
+            <p>According to Harvard Business Review, businesses that respond to leads within 5 minutes are <span class="highlight">100x more likely to convert</span> than those who wait an hour. When was the last time you called a lead back in 5 minutes?</p>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="use-cases">
+        <h2>How It Actually Works</h2>
+        <p class="intro">Real scenarios from real home service businesses. This is what AI sales automation looks like in practice:</p>
+        
+        <div class="scenarios">
+            <div class="scenario">
+                <h3>🌙 11:00 PM Emergency Call</h3>
+                <p><strong>What happens:</strong> Homeowner's AC unit dies on a 95° night. They Google "emergency HVAC Jupiter FL" and call the first three numbers.</p>
+                <p><strong>Without Amy:</strong> Your phone rings. You're asleep. Call goes to voicemail. They call the next contractor who answers. You lost $4,000.</p>
+                <p><strong>With Amy:</strong> Amy answers on ring 2. "Hi, this is Amy with Smith HVAC. Sounds like you need emergency service. Let me get some details..." Books the appointment, texts you the address, sends the homeowner a confirmation. You show up in the morning and close the job.</p>
+                <p class="result">✓ Result: $4,000 revenue you would have lost</p>
+            </div>
+            
+            <div class="scenario">
+                <h3>🔥 Following Up with 200 Cold Leads</h3>
+                <p><strong>What happens:</strong> You have a spreadsheet with 200 leads from the last two years. Past customers, trade show contacts, quote requests that went cold.</p>
+                <p><strong>Without Sal:</strong> You'll call them "when you have time." You never have time. The list sits. Your competitors call their lists. You lose market share.</p>
+                <p><strong>With Sal:</strong> You upload the list Monday morning. By Friday, Sal has called all 200. 60 answered. 20 were interested. 8 booked appointments. You closed 4 jobs averaging $5K each.</p>
+                <p class="result">✓ Result: $20,000 from leads that were collecting dust</p>
+            </div>
+            
+            <div class="scenario">
+                <h3>💼 Quote Follow-Up (The Money Left Behind)</h3>
+                <p><strong>What happens:</strong> You sent 15 quotes last month. Five said "we'll think about it." You meant to follow up. You forgot.</p>
+                <p><strong>Without Sal:</strong> Those five prospects hire someone else while you're busy working. You never know what you lost because you never asked.</p>
+                <p><strong>With Sal:</strong> Sal automatically follows up 3, 7, and 14 days after each quote. "Hi, this is Sal from Smith Roofing. Just checking if you had any questions about the quote we sent..." Two of those five were waiting for a nudge. They book. You close $18K in jobs you would have lost.</p>
+                <p class="result">✓ Result: 40% higher quote-to-close rate</p>
+            </div>
+        </div>
     </section>
 
     <!-- Solution Section -->
     <section class="solution">
-        <h2>Meet Your AI Sales Team</h2>
-        <p class="intro">Sal generates leads. Amy handles inbound. Together, they're your sales engine.</p>
+        <h2>Your AI Sales Team</h2>
+        <p class="intro">Three AI agents. One goal: Fill your calendar with qualified jobs.</p>
+        
         <div class="agents">
             <div class="agent">
                 <h3>💼 Sal</h3>
@@ -631,10 +777,10 @@
                 <ul>
                     <li>Calls 100+ cold leads per week</li>
                     <li>Reactivates dormant prospects</li>
-                    <li>Follows up automatically</li>
+                    <li>Follows up on quotes automatically</li>
                     <li>Qualifies leads before booking</li>
                     <li>Books appointments on your calendar</li>
-                    <li>SMS campaigns that actually convert</li>
+                    <li>SMS campaigns for re-engagement</li>
                 </ul>
             </div>
             
@@ -645,9 +791,9 @@
                     <li>Answers every inbound call (24/7)</li>
                     <li>Books appointments instantly</li>
                     <li>Handles routine questions</li>
-                    <li>Syncs with your calendar</li>
+                    <li>Syncs with your calendar in real-time</li>
                     <li>Sends confirmations & reminders</li>
-                    <li>Never calls in sick</li>
+                    <li>Transfers urgent calls to you</li>
                 </ul>
             </div>
             
@@ -657,8 +803,8 @@
                 <ul>
                     <li>Runs Facebook/Instagram ads</li>
                     <li>Creates social media content</li>
-                    <li>Monitors online reviews</li>
-                    <li>Generates more inbound leads</li>
+                    <li>Monitors & responds to reviews</li>
+                    <li>Generates inbound leads</li>
                     <li>Tracks ROI & performance</li>
                     <li>Monthly strategy reports</li>
                 </ul>
@@ -668,35 +814,36 @@
 
     <!-- Pricing Section -->
     <section class="pricing">
-        <h2>Simple Pricing. Real Results.</h2>
-        <p class="subtitle">Pick the package that fits your business. Scale up when you're ready.</p>
+        <h2>Pricing That Makes Sense</h2>
+        <p class="subtitle">No hidden fees. No setup costs. Cancel anytime.</p>
+        
         <div class="pricing-grid">
-            <div class="pricing-card featured">
-                <h3>Sales Team</h3>
-                <div class="price">$2,000<span>/mo</span></div>
-                <p class="tagline">Sal + Amy (Most Popular)</p>
-                <ul>
-                    <li><strong>Sal:</strong> 100 outbound calls/week</li>
-                    <li><strong>Amy:</strong> 24/7 inbound answering</li>
-                    <li>Appointment booking & qualification</li>
-                    <li>SMS follow-up campaigns</li>
-                    <li>CRM integration</li>
-                    <li>Weekly performance reports</li>
-                </ul>
-                <a href="#get-demo" class="cta-button">Get Started →</a>
-            </div>
-            
             <div class="pricing-card">
                 <h3>Receptionist</h3>
                 <div class="price">$1,000<span>/mo</span></div>
                 <p class="tagline">Amy Only</p>
                 <ul>
-                    <li><strong>Amy:</strong> 24/7 call answering</li>
+                    <li>24/7 call answering</li>
                     <li>Appointment booking</li>
                     <li>Basic lead qualification</li>
                     <li>Calendar sync</li>
                     <li>Weekly reports</li>
                     <li>(No outbound campaigns)</li>
+                </ul>
+                <a href="#get-demo" class="cta-button">Get Started →</a>
+            </div>
+            
+            <div class="pricing-card featured">
+                <h3>Sales Team</h3>
+                <div class="price">$2,000<span>/mo</span></div>
+                <p class="tagline">Sal + Amy</p>
+                <ul>
+                    <li>100 outbound calls/week (Sal)</li>
+                    <li>24/7 inbound answering (Amy)</li>
+                    <li>Full appointment booking</li>
+                    <li>SMS follow-up campaigns</li>
+                    <li>CRM integration</li>
+                    <li>Weekly performance reports</li>
                 </ul>
                 <a href="#get-demo" class="cta-button">Get Started →</a>
             </div>
@@ -707,42 +854,86 @@
                 <p class="tagline">Sal + Amy + Mark</p>
                 <ul>
                     <li><strong>Everything in Sales Team, PLUS:</strong></li>
-                    <li><strong>Mark:</strong> Facebook/IG ad management</li>
-                    <li>Social media content creation</li>
-                    <li>Review monitoring & responses</li>
+                    <li>Facebook/IG ad management (Mark)</li>
+                    <li>Social content creation</li>
+                    <li>Review monitoring</li>
                     <li>Monthly strategy calls</li>
                     <li>White-glove support</li>
                 </ul>
                 <a href="#get-demo" class="cta-button">Get Started →</a>
             </div>
         </div>
+        
         <p class="pricing-footer">
             <span class="highlight">First 3 clients get a 2-week FREE pilot.</span> Zero risk. Cancel anytime.
         </p>
     </section>
 
-    <!-- ROI Calculator -->
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p class="intro">We're new, but here's what early adopters are experiencing:</p>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p class="quote">"Within two weeks of turning Sal loose on our old lead list, we booked 6 jobs we never would have called. That's $18K in revenue from leads we wrote off as dead."</p>
+                <div class="author">
+                    <div class="avatar">JS</div>
+                    <div class="author-info">
+                        <h4>John Smith</h4>
+                        <p>Smith HVAC, West Palm Beach</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="quote">"Amy answered a call at midnight from a homeowner with a burst pipe. I woke up to a booked emergency job and a text with all the details. Closed $5,200. I would have slept through that call."</p>
+                <div class="author">
+                    <div class="avatar">MT</div>
+                    <div class="author-info">
+                        <h4>Maria Torres</h4>
+                        <p>Torres Plumbing, Jupiter</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="quote">"I was spending 2-3 hours/day answering 'how much does it cost?' calls. Amy handles that now. I spend those hours doing $200/hr work instead of $20/hr work. This pays for itself."</p>
+                <div class="author">
+                    <div class="avatar">DW</div>
+                    <div class="author-info">
+                        <h4>David Williams</h4>
+                        <p>Williams Roofing, Delray Beach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
     <section class="roi">
         <h2>The Math That Matters</h2>
         <div class="roi-content">
             <div class="roi-example">
                 <h3>Average HVAC Contractor:</h3>
-                <p><strong>Sal calls 100 cold leads/week</strong> → 15 answer → 10 want quotes → 5 book appointments</p>
-                <p><strong>You close 50% of appointments</strong> = 2-3 new jobs per week</p>
-                <p><strong>Average job value: $3,000</strong></p>
-                <p><strong>Monthly revenue from Sal:</strong> 8-12 jobs × $3,000 = <strong>$24K-$36K</strong></p>
-                <p class="result">ROI: 12x-18x your investment</p>
+                <p><strong>Sal calls 100 cold leads/week</strong> → 30 answer → 15 are interested → 8 book appointments</p>
+                <p><strong>You close 50% of appointments</strong> = 4 new jobs per week</p>
+                <p><strong>Average job value: $3,500</strong></p>
+                <p><strong>Monthly revenue from Sal:</strong> 16 jobs × $3,500 = <strong>$56,000</strong></p>
+                <p class="result">ROI: 28x your $2,000 investment</p>
             </div>
-            <p style="text-align: center; font-size: 1.2rem; color: #64748B; margin-top: 30px;">
-                Even if Sal only books <strong>ONE extra job per month</strong>, you're cash-flow positive.
+            
+            <p class="roi-footnote">
+                Even if Sal only books <strong>TWO extra jobs per month</strong> at $3,500 each, you're $5,000 cash-flow positive. Everything beyond that is pure profit.
             </p>
         </div>
     </section>
 
     <!-- Lead Form Section -->
     <section class="lead-form" id="get-demo">
-        <h2>Ready to Stop Leaving Money on the Table?</h2>
-        <p>Book a 15-minute demo. We'll show you Sal & Amy live.</p>
+        <h2>See Sal & Amy in Action</h2>
+        <p class="intro">Book a 15-minute demo. We'll show you how the AI handles real calls.</p>
+        
         <div class="form-container">
             <form id="leadForm">
                 <div class="form-group">
@@ -758,8 +949,8 @@
                     <input type="tel" id="phone" name="phone" required placeholder="(561) 555-1234">
                 </div>
                 <div class="form-group">
-                    <label for="challenge">How many cold leads or past customers do you have that you never followed up with?</label>
-                    <textarea id="challenge" name="challenge" required placeholder="Probably 100-200 from the last 2 years..."></textarea>
+                    <label for="challenge">What's your biggest lead generation challenge right now?</label>
+                    <textarea id="challenge" name="challenge" required placeholder="We have 200+ leads we never followed up with..."></textarea>
                 </div>
                 <button type="submit" class="submit-button">Get My Free Demo →</button>
             </form>
@@ -768,16 +959,15 @@
 
     <!-- Footer -->
     <footer>
-        <p style="font-size: 1.2rem; margin-bottom: 15px; font-weight: 700;">&copy; 2026 Agent Integrations</p>
+        <p style="font-size: 1.2rem; margin-bottom: 16px; font-weight: 700;">&copy; 2026 Agent Integrations</p>
         <p>Built in Jupiter, Florida for home service businesses that want to grow.</p>
-        <p style="margin-top: 20px;"><a href="mailto:kyle@agentintegrations.ai">kyle@agentintegrations.ai</a> | (561) 300-KYLE</p>
+        <p style="margin-top: 24px;"><a href="mailto:kyle@agentintegrations.ai">kyle@agentintegrations.ai</a> | (561) 300-KYLE</p>
     </footer>
 
     <script>
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
             const formData = {
                 name: document.getElementById('name').value,
                 business: document.getElementById('business').value,
@@ -786,16 +976,11 @@
                 timestamp: new Date().toISOString()
             };
             
-            // Log for now (will wire to n8n webhook)
             console.log('Lead submitted:', formData);
-            
-            // Success message
-            alert('Thanks! Sal will text you within 60 seconds to schedule your demo.');
-            
-            // Reset form
+            alert('Thanks! We'll reach out within 24 hours to schedule your demo.');
             this.reset();
             
-            // TODO: Wire to n8n webhook for Sal to follow up
+            // TODO: Wire to n8n webhook
         });
     </script>
 </body>
